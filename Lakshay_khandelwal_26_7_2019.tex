@@ -1,0 +1,215 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Lakshay Khandelwal (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Lakshay}{Khandelwal}{ \urlstyle{same}\href{}{lk03021998@gmail.com}\\ 
+\href{}{9001640845}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+\sectionsep
+\subsection{BIT Mesra}
+\descript{BE in Computer Science}
+\location{Expected May 2020}
+\location{CGPA: 7.86 (Upto VI sem)}
+\sectionsep
+\sectionsep
+\subsection{Virjanand Sr. Sec. School}
+\descript{HSC | RBSE}
+\location{2014 - 2015}
+\location{Ajmer | Rajasthan}
+\location{ Percentage : 84.40 }
+\sectionsep
+\sectionsep
+\subsection{St.Paul's Sr. Sec. School}
+\descript{SSC | RBSE}
+\location{2012 - 2013}
+\location{Ajmer | Rajasthan}
+\location{ Percentage : 86.62 }
+\sectionsep
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+\textmd{Github://} \href{https://github.com/lk03021998}{\bf lk03021998} \\
+\textmd{LinkedIn://}  \href{https://www.linkedin.com/in/lk03021998/}{\bf lk03021998}\\
+\textmd{InterviewBit://}  \href{https://www.interviewbit.com/profile/lakshay-khandelwal}{\bf lk03021998}\\
+\textmd{Codechef://}  \href{https://www.codechef.com/users/lk03021998}{\bf lk03021998}\\
+\textmd{Codeforces://}  \href{https://codeforces.com/profile/Lk03021998}{\bf lk03021998}\\
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Undergraduate}
+\textmd{Data Structures} \\
+\textmd{Algorithms} \\
+\textmd{Operating System} \\
+\textmd{Object Oriented Programming} \\
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\textbullet{} \textmd{C} 
+\textbullet{} \textmd{C++}
+\textbullet{} \textmd{Java}\\
+\sectionsep
+\location{Familiar:}
+\textbullet{} \textmd{Bash} 
+\textbullet{} \textmd{MySql} \\
+\sectionsep
+\subsection{Tools}
+\textbullet{} \textmd{ElasticSearch}  
+\textbullet{} \textmd{Git}  \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{PROJECTS}
+\sectionsep
+\runsubsection{Varnacular Implementation}\\
+\location{July 2019 - ONGOING }
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\sectionsep
+\begin{tightemize}
+\item \textmd{An efficient solution for an e-commerce website to show the results for queries written in native language.}
+\item \textmd{To convert the query in English firstly we will use Google Transliterate and Translate API.}
+\item \textmd{Then we will use ElasticSearch to extract tokens from query and search for the product in our database.}
+\end{tightemize}
+\sectionsep
+\sectionsep
+\sectionsep
+
+
+\runsubsection{Content-based Image Retrieval System}\\
+\location{May 2019 - June 2019 }
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item \textmd{Given an Image dataset our aim is to find related image of a query image using  color distribution in image.}
+\item \textmd{To get the color distribution in image we extracted the color histogram from different parts of image and concatenate them to make complete feature vector of image.}
+\item \textmd{For each image of the dataset we extracted the features and stored it in CSV file.}
+\item \textmd{For each query image we find its feature vector and calculate the Euclidean distance from the vectors in CSV file. Then returned the best matching results.}
+\end{tightemize}
+\sectionsep
+\sectionsep
+\sectionsep
+\runsubsection{Solving maze problem using Heuristic search}\\
+\location{September 2018 - October 2018 }
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item \textmd{Given a 2D/3D maze having obstacle on various positions, our aim is to find a path from a starting position to the destination position using A* algorithm.}
+\item \textmd{We used Pythagoras Distance between current point and destination point as the heuristic value to reach destination.}
+\end{tightemize}
+\sectionsep
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     ACHIEVEMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Achievements} 
+\begin{tabular}{rll}
+\textmd{2018}	     & \textmd{65/115}  & \textbf{ACM ICPC Pune-Gwalior Regionals}\\
+\textmd{2018}	     & \textmd{63/159}  & \textbf{ACM ICPC Kolkata-Kanpur Regionals}\\
+\textmd{2018}	     & \textmd{45/926}  & \textmd{Codechef Encoder}\\
+\textmd{2018}         & \textmd{206/8788}  &\textmd{June Challenge 2018 Division 2}\\ 
+\textmd{2019}         & \textmd{35/2956}  &\textmd{Codechef July Lunchtime 2019 Division 2}\\
+\textmd{2018}         & \textmd{77/500}  & \textmd{Codechef  Insomnia 2018}\\
+\textmd{2018}         & \textmd{185/1657}  & \textmd{Codechef  Code Melange}\\
+\end{tabular}
+\sectionsep
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
